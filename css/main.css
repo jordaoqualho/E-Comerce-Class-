@@ -1,0 +1,288 @@
+:root {
+  --mainFont: "Anton", sans-serif;
+  --lighGreen: #20fc8f;
+  --black: #2d2d2a;
+  --green: #3f5e5a;
+}
+
+/* global style */
+
+* {
+  border: 0;
+  margin: 0;
+  list-style: none;
+  outline: none;
+}
+
+.caixa {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* menu section style */
+
+.menu {
+  flex-direction: column;
+}
+
+.search {
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.logo {
+  font-family: var(--mainFont);
+  font-size: 30px;
+  margin: 10px 150px 10px 10px;
+}
+
+.search-bar {
+  margin: 10px 120px 10px 10px;
+}
+
+.search-bar input {
+  border-radius: 3px 0 0 3px;
+  width: 500px;
+  border: 1px solid rgb(211, 211, 211);
+  padding: 8px;
+}
+
+.search-bar input:focus {  
+  border-color: var(--green);
+  box-shadow:  0 0 5px var(--green);
+  outline: 0 none;
+}
+
+.btn-search {
+  background-color: var(--green);
+  padding: 7.5px 15px;
+  height: 33.5px;
+  cursor: pointer;
+  border-radius: 0px 3px 3px 0;
+}
+.btn-search:hover {
+  background-color: black;
+}
+
+.btn-search i {
+  font-size: 18px;
+  color: white;
+}
+
+.btn-login {
+  background-color: transparent;
+  border-radius: 3px;
+  border: 1px solid var(--green);
+  padding: 2px 15px;
+  color: var(--green);
+  font-family: var(--mainFont);
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.btn-login:hover {
+  background-color: var(--green);
+  color: white;
+}
+
+.icon-car {
+  font-size: 25px;
+  color: black;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.icon-car:hover {
+  color: var(--green);
+}
+
+.sub-menu {
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.sub-menu i {
+  font-size: 25px;
+  cursor: pointer;
+  margin: 0px 20px;
+}
+
+.sub-menu-list {
+  font-family: var(--mainFont);
+  padding: 0;
+}
+
+.sub-menu-list li {
+  padding: 15px;
+  cursor: pointer;
+}
+
+.sub-menu-list li:hover {
+  background-color: black;
+  color: white;
+}
+
+.green {
+  color: var(--green);
+}
+
+.green:hover {
+  background-color: var(--green) !important;
+}
+
+#outlet {
+  margin-left: 190px;
+}
+
+.slide-menu {
+  display: none;
+}
+.mobile {
+  visibility: hidden;
+  display: none;
+}
+
+/* menu style mobile */
+@media only screen and (max-width: 680px) {
+  .menu {
+    background-color: black;
+    height: 70px;
+    z-index: 2;
+    width: 100vw;
+    flex-direction: row;
+  }
+  .search {
+    display: none;
+  }
+  .sub-menu {
+    display: none;
+  }
+  .mobile {
+    visibility: visible;
+  }
+  .hamburg {
+    margin: 0 50px 0 5px;
+    transition: .5s ease;
+  }
+  .hamburg.ativo {
+    margin-left: 500px;
+  }
+  .line {
+    background-color: white;
+    transition: .5s ease;
+    width: 30px;
+    height: 5px;
+    border-radius: 5px;
+    margin: 4px;
+  }
+  .l1.ativo {
+    transform: rotate(45deg) translate(10px, 0px);
+  }
+  .l2.ativo {
+    transform: translate(-100px, 0px);
+    transition: 2s ease;
+    opacity: 0;
+  }
+  .l3.ativo {
+    transform: rotate(-45deg) translate(12px, -3px);
+  }
+  .logo {
+    color: white;
+    margin: 0 auto;
+  }
+  .icon-search {
+    color: white;
+    font-size: 20px;
+  }
+  .icon-car {
+    color: white;
+    font-size: 20px;
+  }
+  .slide-menu {
+    background-color: black;
+    transition: .5s ease;
+    position: absolute;
+    top: 0;
+    left: -70vw;
+    display: flex;
+    z-index: 10;
+    height: 100vh;
+    width: 70vw;
+  }
+  .slide-list {
+    color: white;
+    font-family: var(--mainFont);
+    font-size: 24px;
+    width: 100%;
+    padding: 0;
+  }
+  .slide-list li {
+    padding: 20px 0px 20px 30px;
+    border-bottom: 1px solid gray;     
+  }
+  .entrar {
+    background-color: #fff;
+    color: black;
+  }
+  .slide-menu.ativo {
+    left: 0;
+  }
+}
+
+/* estilo da section ofertas */ 
+
+.ofertas {
+  flex-direction: column;
+  font-family: var(--mainFont);
+  margin-bottom: 500px; /*remover no futuro*/
+}
+.titulo {
+  margin: 50px 0;
+  width: 100%;
+  font-family: var(--mainFont);
+  font-size: 25px;
+}
+.titulo p {
+  margin: 0 20px;
+}
+.linha {
+  width: 420px;
+  height: 1px;
+  background-color: black;
+}
+.ofertas-itens {
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.camiseta {
+  margin-right: 50px;
+}
+.grid-itens {
+  display: grid;
+  column-gap: 15px;
+  width: 50%;
+  grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
+}
+.btn-ofertas {
+  background-color: var(--green);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.ofertas img {
+  transition: transform .5s ease;
+  cursor: pointer;
+}
+.ofertas img:hover {
+  transform: scale(1.05);
+}
+
